@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/sunbird-html-player",
+  "dest": "../../dist/sunbird-html-h5p-player",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

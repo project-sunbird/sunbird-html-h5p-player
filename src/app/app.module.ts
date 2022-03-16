@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SunbirdHtmlPlayerModule } from 'projects/sunbird-html-player/src/public-api';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SunbirdHtmlH5pPlayerModule } from 'projects/sunbird-html-h5p-player/src/public-api';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SunbirdHtmlPlayerModule
+    SunbirdHtmlH5pPlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

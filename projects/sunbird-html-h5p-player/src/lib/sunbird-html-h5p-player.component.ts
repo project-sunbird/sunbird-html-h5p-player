@@ -2,13 +2,15 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild, Input } from '@
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'sunbird-html-player',
-  templateUrl: './sunbird-html-player.html',
+  // tslint:disable-next-line:component-selector
+  selector: 'sunbird-html-h5p-player',
+  templateUrl: './sunbird-html-h5p-player.html',
   styles: [
   ]
 })
-export class SunbirdHtmlPlayerComponent implements OnInit {
-   @ViewChild('iframe', { static: true })
+export class SunbirdHtmlH5pPlayerComponent implements OnInit {
+
+  @ViewChild('iframe', { static: true })
   iframeRef!: ElementRef;
 
   private actionsMap = new Map([
@@ -24,6 +26,7 @@ export class SunbirdHtmlPlayerComponent implements OnInit {
   constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.mypreview= this.sanitizer.bypassSecurityTrustResourceUrl(this.playerConfig?.streamingUrl + '/index.html');
+    this.mypreview = this.sanitizer.bypassSecurityTrustResourceUrl(this.playerConfig?.streamingUrl + '/index.html');
   }
+
 }
